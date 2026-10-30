@@ -194,7 +194,7 @@ python tests/smoke_test.py
 | Danh mục mã | Toàn bộ mã nguồn của 21 script và các mô-đun dùng chung, kèm bảng cấu trúc mã tổng thể |
 | Khoang dữ liệu | Thư mục ảnh (thư mục con = lớp), âm thanh, bảng (CSV / JSON / XLSX); thấy rõ từng bước tiền xử lý; perceptron hoặc MLP huấn luyện trong trình duyệt bằng Adam, đường cong trực tiếp, ma trận nhầm lẫn |
 | So sánh → triển khai | Phiên bản mới chỉ được đưa lên khi điểm kiểm định cao hơn phiên bản đang chạy; lịch sử phiên bản, suy luận trực tuyến, xuất mô hình JSON và đặc trưng CSV |
-| Ba chế độ ngôn ngữ | Giao diện: Trung / Anh / song ngữ — giao diện, nhãn 3D, prompt và đầu ra của mô hình đều chuyển theo |
+| Ba chế độ ngôn ngữ | Trung / Anh / song ngữ — giao diện, nhãn 3D, prompt và đầu ra của mô hình đều chuyển theo |
 
 ### Phiên bản web tĩnh dùng được gì
 
