@@ -48,7 +48,7 @@ flowchart LR
 | 代码目录 | 21 个脚本 + 公共模块的完整源码，右侧是总代码结构 |
 | 数据舱 | 图片文件夹（子文件夹=类别）、声音、表格（CSV / JSON / XLSX）；看到每一步预处理；感知机或 MLP 在浏览器里用 Adam 训练，实时曲线、混淆矩阵 |
 | 对比 → 上线 | 新版本的验证分数必须超过线上版本才能上线；版本历史、在线推理、导出模型 JSON 和特征 CSV |
-| 三种语言模式 | 中文 / EN / 中英，界面、3D 标签、提示词和模型输出都跟着切换 |
+| 四种语言模式 | 中文 / EN / 中英 / VI（越南语），界面、3D 标签、提示词和模型输出都跟着切换 |
 
 ### 静态网页版能用什么
 
@@ -121,7 +121,7 @@ python tests/smoke_test.py
 | Code catalog | Full source of the 21 scripts and shared modules, with an overall code-structure panel |
 | Data bay | Image folder (sub-folder = class), audio, tables (CSV / JSON / XLSX); every preprocessing step is visible; a perceptron or MLP trains in the browser with Adam, live curves, confusion matrix |
 | Compare → deploy | A candidate goes online only if its validation score beats the online version; version history, online inference, model JSON and features CSV export |
-| Three language modes | Chinese / English / both — UI, 3D labels, prompts and model output |
+| Four language modes | Chinese / English / both / VI (Vietnamese) — UI, 3D labels, prompts and model output |
 
 ### What the static web version can do
 
@@ -194,7 +194,7 @@ python tests/smoke_test.py
 | Danh mục mã | Toàn bộ mã nguồn của 21 script và các mô-đun dùng chung, kèm bảng cấu trúc mã tổng thể |
 | Khoang dữ liệu | Thư mục ảnh (thư mục con = lớp), âm thanh, bảng (CSV / JSON / XLSX); thấy rõ từng bước tiền xử lý; perceptron hoặc MLP huấn luyện trong trình duyệt bằng Adam, đường cong trực tiếp, ma trận nhầm lẫn |
 | So sánh → triển khai | Phiên bản mới chỉ được đưa lên khi điểm kiểm định cao hơn phiên bản đang chạy; lịch sử phiên bản, suy luận trực tuyến, xuất mô hình JSON và đặc trưng CSV |
-| Ba chế độ ngôn ngữ | Trung / Anh / song ngữ — giao diện, nhãn 3D, prompt và đầu ra của mô hình đều chuyển theo |
+| Bốn chế độ ngôn ngữ | Trung / Anh / song ngữ / VI (tiếng Việt) — giao diện, nhãn 3D, prompt và đầu ra của mô hình đều chuyển theo |
 
 ### Phiên bản web tĩnh dùng được gì
 
