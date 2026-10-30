@@ -1,0 +1,16 @@
+# Extra libraries for models/zoo (install after models/requirements.txt).
+# With torch-directml (AMD on Windows), pin torch so nothing upgrades it:
+#   pip install -r models/zoo/requirements-zoo.txt "torch==2.4.1" "torchvision==0.19.1"
+# Without DirectML:
+#   pip install -r models/zoo/requirements-zoo.txt
+pykan>=0.2.6                     # kan_net.py
+sympy                            # pykan runtime
+matplotlib                       # pykan runtime
+tqdm                             # pykan runtime
+pyyaml                           # pykan runtime
+timm>=0.9.12                     # vit.py, dit.py
+diffusers>=0.31,<0.33            # vae.py, diffusion.py, dit.py
+torch_geometric>=2.5             # gnn.py
+stable-baselines3>=2.3           # dqn.py
+gymnasium[classic-control]>=0.29 # dqn.py (classic-control adds rendering for `play --render`)
+# mamba-ssm                      # mamba.py official kernels: NVIDIA GPU + Linux only; otherwise the pure-PyTorch reference is used

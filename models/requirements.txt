@@ -1,0 +1,16 @@
+# Neural Forge training scripts
+# AMD GPU on Windows: install torch-directml FIRST (it brings a matching torch), then this file:
+#   pip install torch-directml
+#   pip install -r models/requirements.txt
+# NVIDIA GPU: install torch from https://pytorch.org (CUDA build) first. CPU-only also works.
+torch>=2.2
+torchvision>=0.17
+# torch-directml pins an older torch; transformers 4.50+ refuses .bin weights on torch < 2.6
+transformers>=4.40,<4.50
+tokenizers>=0.15,<0.22
+segmentation-models-pytorch>=0.3.3
+scikit-learn>=1.4
+pandas>=2.0,<3.0
+numpy>=1.24
+joblib>=1.3
+pillow>=10.0
