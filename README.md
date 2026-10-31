@@ -4,15 +4,12 @@ A 3D atlas of 21 neural-network architectures. An AI core in the centre picks th
 
 21 种神经网络架构的 3D 图谱。中央的 AI 核心按问题挑出结构最匹配的网络"换脑"，逐层推理，再和单次直答对比。每个模型都有可运行的 PyTorch 脚本；数据舱可以载入你自己的图片、声音或表格，在浏览器里训练、对比、上线。
 
-Bản đồ 3D của 21 kiến trúc mạng nơ-ron. Lõi AI ở trung tâm chọn mạng có cấu trúc phù hợp nhất với câu hỏi, "thay não", suy luận theo từng lớp rồi so sánh với câu trả lời một lượt. Mỗi mô hình đều có script PyTorch chạy được; khoang dữ liệu cho phép huấn luyện, so sánh và triển khai mô hình nhỏ trên ảnh, âm thanh hoặc bảng của bạn ngay trong trình duyệt.
-
-**Live page / 在线页面 / Trang trực tuyến:** https://tianmingliu-pixel.github.io/neural-atlas/
+**Live page / 在线页面：** https://tianmingliu-pixel.github.io/neural-atlas/
 
 ![Neural Atlas main stage](docs/img/stage.jpg)
 
 - [中文](#中文)
 - [English](#english)
-- [Tiếng Việt](#tiếng-việt)
 
 ```mermaid
 flowchart LR
@@ -48,7 +45,7 @@ flowchart LR
 | 代码目录 | 21 个脚本 + 公共模块的完整源码，右侧是总代码结构 |
 | 数据舱 | 图片文件夹（子文件夹=类别）、声音、表格（CSV / JSON / XLSX）；看到每一步预处理；感知机或 MLP 在浏览器里用 Adam 训练，实时曲线、混淆矩阵 |
 | 对比 → 上线 | 新版本的验证分数必须超过线上版本才能上线；版本历史、在线推理、导出模型 JSON 和特征 CSV |
-| 四种语言模式 | 中文 / EN / 中英 / VI（越南语），界面、3D 标签、提示词和模型输出都跟着切换 |
+| 三种语言模式 | 中文 / EN / 中英，界面、3D 标签、提示词和模型输出都跟着切换 |
 
 ### 静态网页版能用什么
 
@@ -121,7 +118,7 @@ python tests/smoke_test.py
 | Code catalog | Full source of the 21 scripts and shared modules, with an overall code-structure panel |
 | Data bay | Image folder (sub-folder = class), audio, tables (CSV / JSON / XLSX); every preprocessing step is visible; a perceptron or MLP trains in the browser with Adam, live curves, confusion matrix |
 | Compare → deploy | A candidate goes online only if its validation score beats the online version; version history, online inference, model JSON and features CSV export |
-| Four language modes | Chinese / English / both / VI (Vietnamese) — UI, 3D labels, prompts and model output |
+| Three language modes | Chinese / English / both — UI, 3D labels, prompts and model output |
 
 ### What the static web version can do
 
@@ -177,65 +174,3 @@ python tests/smoke_test.py
 - Browser training uses hand-made features and a small network, not real convolutions; use `models/zoo` for real CNN / ViT training.
 - "Brain swap" uses a network's structure as a reasoning template for the language model; it does not run, say, a CNN on the question.
 - Spacetime themes are sci-fi metaphors; layer shapes and data flow are the model's real structure.
-
----
-
-## Tiếng Việt
-
-### Tính năng
-
-| Mô-đun | Chức năng |
-|---|---|
-| Sân khấu 3D | 21 mô hình thuộc 6 họ xếp trên một vòng, màn hình mã nguồn của từng mô hình ở phía trên, lõi AI ở trung tâm; bấm tên họ để mở thẻ wiki trong suốt |
-| Suy luận "thay não" | Định tuyến → thay não → suy luận theo lớp ×5 → tự sửa ×3 → sinh câu trả lời có điều kiện → chấm điểm; mỗi bước hoạt ảnh 3D đều lấy từ JSON mà lời gọi định tuyến trả về |
-| Một lượt vs lặp theo mạng | Hai câu trả lời đặt cạnh nhau, đo thời gian thực (token đầu, tổng thời gian, độ dài) và điểm chấm |
-| Góc nhìn liên ngành | Công thức, mô phỏng vật lý 2D, bản đồ nhiệt theo khoa học màu sắc (giai đoạn trống / vùng ma sát / điểm dùng lực, so với môi trường tham chiếu), sơ đồ cơ chế |
-| Soi kiến trúc | Vẽ đúng hình dạng các lớp theo tham số mặc định của script; 5 chủ đề không-thời gian (nhân quả, dòng thời gian, lỗ sâu, vũ trụ song song, giảm chiều), mỗi chủ đề gắn với toán học của mô hình |
-| Danh mục mã | Toàn bộ mã nguồn của 21 script và các mô-đun dùng chung, kèm bảng cấu trúc mã tổng thể |
-| Khoang dữ liệu | Thư mục ảnh (thư mục con = lớp), âm thanh, bảng (CSV / JSON / XLSX); thấy rõ từng bước tiền xử lý; perceptron hoặc MLP huấn luyện trong trình duyệt bằng Adam, đường cong trực tiếp, ma trận nhầm lẫn |
-| So sánh → triển khai | Phiên bản mới chỉ được đưa lên khi điểm kiểm định cao hơn phiên bản đang chạy; lịch sử phiên bản, suy luận trực tuyến, xuất mô hình JSON và đặc trưng CSV |
-| Bốn chế độ ngôn ngữ | Trung / Anh / song ngữ / VI (tiếng Việt) — giao diện, nhãn 3D, prompt và đầu ra của mô hình đều chuyển theo |
-
-### Phiên bản web tĩnh dùng được gì
-
-Trang trên GitHub Pages là trang tĩnh và **không chứa bất kỳ khóa API nào**:
-
-- Dùng ngay: bản đồ 3D, toàn bộ quy trình "Play example", soi kiến trúc, danh mục mã, wiki, và khoang dữ liệu (huấn luyện / triển khai / suy luận trực tuyến / xuất file).
-- Hỏi trực tiếp cần mô hình ngôn ngữ: khi mở trang bên trong Claude, trang dùng hạn mức Claude của bạn (5 lời gọi cho mỗi câu hỏi). Bản tĩnh sẽ hiển thị thông báo và vô hiệu hóa nút Run.
-
-### Triển khai lên GitHub Pages
-
-Vào Settings → Pages → Build and deployment → Source: **Deploy from a branch**, nhánh `main`, thư mục `/ (root)`, bấm Save. Khoảng một phút sau trang sẽ có tại `https://<user>.github.io/neural-atlas/`. Đã có sẵn `.nojekyll`, không cần bước build.
-
-### Chạy trên máy
-
-```bash
-# Mở trực tiếp index.html cũng được; hoặc chạy máy chủ cục bộ:
-python -m http.server 8080
-# rồi mở http://127.0.0.1:8080
-```
-
-### Kho mô hình PyTorch
-
-```bash
-pip install -r models/requirements.txt
-pip install -r models/zoo/requirements-zoo.txt
-python models/zoo/cnn.py train --dataset digits --arch lenet
-python models/zoo/vit.py train --data path/to/images   # mỗi lớp một thư mục con
-python models/run_selftests.py                          # chạy toàn bộ tự kiểm tra
-```
-
-Mỗi script đều hỗ trợ `train` / `predict` / `selftest`. Trên Windows với GPU AMD, hãy cài `torch-directml` trước (xem đầu file `models/requirements.txt`).
-
-### Kiểm thử
-
-```bash
-pip install playwright && python -m playwright install chromium
-python tests/smoke_test.py
-```
-
-### Giới hạn đã biết
-
-- Huấn luyện trong trình duyệt dùng đặc trưng thủ công và mạng nhỏ, không phải tích chập thật; hãy dùng `models/zoo` để huấn luyện CNN / ViT thật.
-- "Thay não" dùng cấu trúc của mạng làm khuôn suy luận cho mô hình ngôn ngữ; nó không chạy trực tiếp, ví dụ, một CNN lên câu hỏi.
-- Các chủ đề không-thời gian là ẩn dụ khoa học viễn tưởng; hình dạng lớp và luồng dữ liệu vẫn là cấu trúc thật của mô hình.
